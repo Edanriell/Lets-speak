@@ -1,0 +1,47 @@
+@import "~normalize.css"
+@import "roboto"
+
+@import 'page-nav'
+@import 'page-header'
+@import 'page-main'
+@import 'page-footer'
+@import 'page-animations'
+
+$mainFont: 'Roboto'
+$mainTextColor: #3C425F
+$containerWidth: 1440px
+$containerHeight: 100vh
+
+body
+  font-family: $mainFont
+  font-style: normal
+  font-weight: 300
+  font-size: 14px
+  line-height: 20px
+  color: $mainTextColor
+  scroll-behavior: smooth
+
+html,
+body
+  min-width: $containerWidth
+  min-height: $containerHeight
+
+.visually-hidden
+  position: absolute
+  clip: rect(1px, 1px, 1px, 1px)
+  padding: 0
+  border: 0
+  height: 1px
+  width: 1px
+  overflow: hidden
+
+.container
+  width: $containerWidth
+  margin: 0 auto
+
+.page
+  display: grid
+  grid-template-areas: "nav header" "nav main" "footer footer"
+  grid-template-columns: 280px 1fr
+  grid-template-rows: 80px 1fr 60px
+  min-height: 100vh

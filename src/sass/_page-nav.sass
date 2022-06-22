@@ -1,0 +1,115 @@
+$hoverColor: #F1F3FE
+$textColor: #3C425F
+$textColorHover: #576BCC
+$navBackgroundColor: #fff
+
+=theme-colors($hoverColor: true)
+  @if $hoverColor
+    a
+      color: $textColorHover
+      font-family: 'Roboto-Medium'
+      font-style: normal
+      font-weight: 500
+      font-size: 16px
+      line-height: 20px
+
+=icon
+  background-repeat: no-repeat
+  background-position: center
+
+.page-nav
+  grid-area: nav
+  font-family: 'Roboto-Light'
+  font-size: 16px
+  font-style: normal
+  font-weight: 300
+  font-size: 16px
+  line-height: 20px
+  width: 280px
+  height: 920px
+  background-color: $navBackgroundColor
+  display: grid
+  grid-template-rows: 80px 1fr auto
+
+  &__main-logo
+    width: 162px
+    height: 36px
+    margin: 24px 30px 15px
+
+  &__main-nav
+    list-style: none
+    padding: 0
+    margin: 0
+
+    li:hover
+      background-image: url('../img/icons/menu-icon.svg')
+      +icon
+      background-position: 0px 0px
+
+    &__link
+      position: relative
+      display: block
+      padding: 20px 25px 20px 63px
+
+      &:hover
+        background-color: $hoverColor
+        +theme-colors($hoverColor:true)
+
+      &:before
+        content: ''
+        position: absolute
+        width: 20px
+        height: 20px
+        left: 30px
+
+      &__cab:before
+        background-image: url('../img/icons/cab.svg')
+        +icon
+
+      &__cab:hover:before
+        background-image: url('../img/icons/cab-filled.svg')
+        +icon
+
+      &__class:before
+        background-image: url('../img/icons/class.svg')
+        +icon
+
+      &__class:hover:before
+        background-image: url('../img/icons/class-filled.svg')
+        +icon
+
+      &__book:before
+        background-image: url('../img/icons/book.svg')
+        +icon
+
+      &__book:hover:before
+        background-image: url('../img/icons/book-filled.svg')
+        +icon
+
+      &__home-work:before
+        background-image: url('../img/icons/home-work.svg')
+        +icon
+
+      &__home-work:hover:before
+        background-image: url('../img/icons/home-work-filled.svg')
+        +icon
+
+      &__exam:before
+        background-image: url('../img/icons/exam.svg')
+        +icon
+
+      &__exam:hover:before
+        background-image: url('../img/icons/exam-filled.svg')
+        +icon
+
+      &__settings:before
+        background-image: url('../img/icons/settings.svg')
+        +icon
+
+      &__settings:hover:before
+        background-image: url('../img/icons/settings-filled.svg')
+        +icon
+
+      a
+        text-decoration: none
+        color: $textColor

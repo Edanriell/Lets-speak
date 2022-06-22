@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="Языковая школа Let's Speak" />
+		<meta name="robots" content="index,follow" />
+		<link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
+		<title>Let's Speak</title>
+		<div class="class"></div>
+	</head>
+	<body class="page container">
+		<nav class="page-nav">
+			<a href="#">
+				<img
+					src="./img/logo.svg"
+					alt="Языковая школа Let's Speak"
+					class="page-nav__main-logo"
+					width="162"
+					height="36"
+				/>
+			</a>
+			<ul class="page-nav__main-nav">
+				<li class="page-nav__main-nav__link page-nav__main-nav__link__cab">
+					<a href="#">Кабинет ученика</a>
+				</li>
+				<li class="page-nav__main-nav__link page-nav__main-nav__link__class">
+					<a href="#">Учебный класс</a>
+				</li>
+				<li class="page-nav__main-nav__link page-nav__main-nav__link__book">
+					<a href="#">Методичка</a>
+				</li>
+				<li class="page-nav__main-nav__link page-nav__main-nav__link__home-work">
+					<a href="#">Домашняя работа</a>
+				</li>
+				<li class="page-nav__main-nav__link page-nav__main-nav__link__exam">
+					<a href="#">Экзамены</a>
+				</li>
+			</ul>
+			<ul class="page-nav__main-nav">
+				<li class="page-nav__main-nav__link page-nav__main-nav__link__settings">
+					<a href="#">Настройки</a>
+				</li>
+			</ul>
+		</nav>
+		<header class="page-header">
+			<div class="page-header__search page-header__search__icon">
+				<form action="#" method="get" autocomplete="off">
+					<input
+						class="page-header__search__search-field"
+						type="text"
+						name="search"
+						id="search"
+						placeholder="Поиск..."
+						required
+					/>
+				</form>
+			</div>
+			<div class="page-header__user-profile" data-name="O">
+				<a class="page-header__user-profile__name" href="#">Опознанный Енот</a>
+				<button class="page-header__user-profile__more" type="button">
+					<span class="visually-hidden">Открыть/Закрыть меню</span>
+				</button>
+			</div>
+			<div class="page-header__user-notifications">
+				<button class="page-header__user-notifications__bell">
+					<span class="page-header__user-notifications__count">1</span>
+				</button>
+			</div>
+		</header>
+		<main class="page-main">
+			<h1 class="visually-hidden">Главная страница сайта языковой школы Let’s Speak</h1>
+			<div class="page-main__slider">
+				<div class="page-main__slider__wrapper">
+					<div class="page-main__slider__slide">
+						<img
+							src="./img/slider/slide1.png"
+							alt="Фотография Bigban"
+							class="page-main__slider__slide-img0"
+							width="820"
+							height="300"
+						/>
+						<p class="page-main__slider__slide-headline">
+							«Бифитер», «Кокни», «Даблдекер»...
+						</p>
+						<p class="page-main__slider__slide-text">
+							Пройдите тест и узнайте насколько хорошо вы знакомы <br />
+							с жизнью в Лондоне
+						</p>
+						<a href="#" class="page-main__slider__btn">Пройти тест ➞</a>
+					</div>
+					<div class="page-main__slider__slide">
+						<img
+							src="./img/slider/slide2.png"
+							alt="Фотография города Нью-Йорк"
+							class="page-main__slider__slide-img1"
+							width="820"
+							height="300"
+						/>
+						<p class="page-main__slider__slide-headline">
+							Посетите города о которых всегда мечтали
+						</p>
+						<p class="page-main__slider__slide-text">
+							Наши интенсивы по английскому языку помогут вам<br />
+							в кратчайшие сроки овладеть английским языком в совершенстве
+						</p>
+						<a href="#" class="page-main__slider__btn">Записаться на интенсив ➞</a>
+					</div>
+					<div class="page-main__slider__slide">
+						<img
+							src="./img/slider/slide3.png"
+							alt="Фотография города Рига"
+							class="page-main__slider__slide-img2"
+							width="820"
+							height="300"
+						/>
+						<p class="page-main__slider__slide-headline">Освежите свои знания</p>
+						<p class="page-main__slider__slide-text">
+							В сотрудничестве с Рижской городской думой<br />
+							приглашаем всех желающих на бесплатные курсы Латышского языка
+						</p>
+						<a href="#" class="page-main__slider__btn"
+							>Записаться на бесплатные курсы ➞</a
+						>
+					</div>
+					<div class="page-main__slider__slide">
+						<img
+							src="./img/slider/slide4.png"
+							alt="Фотография города Сеул"
+							class="page-main__slider__slide-img3"
+							width="820"
+							height="300"
+						/>
+						<p class="page-main__slider__slide-headline">Расширь свой кругозор</p>
+						<p class="page-main__slider__slide-text">
+							Освоите Корейский и Японский язык <br />
+							в нашей языковой школе по доступным ценам
+						</p>
+						<a href="#" class="page-main__slider__btn">Записаться на курсы ➞</a>
+					</div>
+				</div>
+				<div class="page-main__slider__controls">
+					<button class="page-main__slider__btn-prev" type="button">
+						<span class="visually-hidden">Назад</span>
+					</button>
+					<button class="page-main__slider__btn-next" type="button">
+						<span class="visually-hidden">Вперёд</span>
+					</button>
+				</div>
+			</div>
+			<section class="page-main__offers">
+				<h2 class="visually-hidden">Интересные предложения</h2>
+				<ul class="page-main__offers__offer-list">
+					<li class="page-main__offers__offer-list__item">
+						<h3 class="page-main__offers__offer-list__item__name">
+							Английский завтрак
+						</h3>
+						<div class="page-main__offers__offer-list__item__content">
+							<p class="page-main__offers__offer-list__item__content__description">
+								Разговорный клуб
+							</p>
+							<p class="page-main__offers__offer-list__item__content__time">
+								10:00 — 11:00 (ПН—ПТ)
+							</p>
+						</div>
+						<div class="page-main__offers__offer-list__item__footer">
+							<a href="#">Записаться ➞</a>
+						</div>
+					</li>
+					<li class="page-main__offers__offer-list__item">
+						<h3 class="page-main__offers__offer-list__item__name">Лето в Лондоне</h3>
+						<div class="page-main__offers__offer-list__item__content">
+							<p class="page-main__offers__offer-list__item__content__description">
+								Месяц экскурсий и практики
+							</p>
+							<p class="page-main__offers__offer-list__item__content__time">
+								10 июня — 3 июля
+							</p>
+						</div>
+						<div class="page-main__offers__offer-list__item__footer">
+							<a href="#">Отправиться ➞</a>
+						</div>
+					</li>
+					<li class="page-main__offers__offer-list__item">
+						<h3 class="page-main__offers__offer-list__item__name">
+							Надоел английский?
+						</h3>
+						<div class="page-main__offers__offer-list__item__content">
+							<p class="page-main__offers__offer-list__item__content__description">
+								С нами можно выучить <br />
+								и другие языки
+							</p>
+						</div>
+						<div class="page-main__offers__offer-list__item__footer">
+							<a href="#">Открыть список ➞</a>
+						</div>
+					</li>
+				</ul>
+			</section>
+			<section class="page-main__courses">
+				<h2 class="visually-hidden">Просмотр уроков онлайн</h2>
+				<div class="page-main__courses__video">
+					<video
+						src="#"
+						width="540"
+						height="300"
+						preload="metadata"
+						poster="./img/videoPreview.png"
+					>
+						<source src="#" type="video/mp4; codecs='avc1.42E01E, mp4a.40.2'" />
+					</video>
+					<button type="button" class="page-main__courses__videoPlayBtn">
+						<span class="visually-hidden">Смотреть видео</span>
+					</button>
+				</div>
+				<div class="page-main__courses__playlist">
+					<h3 class="page-main__courses__playlist__header">Курс English A1</h3>
+					<ul class="page-main__courses__playlist__list">
+						<li class="page-main__courses__playlist__list__item">
+							<button
+								class="page-main__courses__playlist__list__item__play-btn"
+								type="button"
+							>
+								<span class="visually-hidden">Пуск/Стоп</span>
+							</button>
+							<h4 class="page-main__courses__playlist__list__item__title">Урок 8</h4>
+							<p class="page-main__courses__playlist__list__item__description">
+								Времена глаголов
+							</p>
+						</li>
+						<li class="page-main__courses__playlist__list__item">
+							<button
+								class="page-main__courses__playlist__list__item__play-btn"
+								type="button"
+							>
+								<span class="visually-hidden">Пуск/Стоп</span>
+							</button>
+							<h4 class="page-main__courses__playlist__list__item__title">Урок 9</h4>
+							<p class="page-main__courses__playlist__list__item__description">
+								Неправильные глаголы
+							</p>
+						</li>
+						<li
+							class="page-main__courses__playlist__list__item page-main__courses__playlist__list__item__disabled"
+						>
+							<button
+								class="page-main__courses__playlist__list__item__play-btn"
+								type="button"
+								disabled
+							>
+								<span class="visually-hidden">Пуск/Стоп</span>
+							</button>
+							<h4 class="page-main__courses__playlist__list__item__title">Урок 10</h4>
+							<p class="page-main__courses__playlist__list__item__description">
+								Present Simple
+							</p>
+						</li>
+						<li
+							class="page-main__courses__playlist__list__item page-main__courses__playlist__list__item__disabled"
+						>
+							<button
+								class="page-main__courses__playlist__list__item__play-btn"
+								type="button"
+								disabled
+							>
+								<span class="visually-hidden">Пуск/Стоп</span>
+							</button>
+							<h4 class="page-main__courses__playlist__list__item__title">Урок 11</h4>
+							<p class="page-main__courses__playlist__list__item__description">
+								Past Simple
+							</p>
+						</li>
+						<li
+							class="page-main__courses__playlist__list__item page-main__courses__playlist__list__item__disabled page-main__courses__playlist__list__item__disabled__unreachable"
+						>
+							<button
+								class="page-main__courses__playlist__list__item__play-btn"
+								type="button"
+								disabled
+							>
+								<span class="visually-hidden">Пуск/Стоп</span>
+							</button>
+							<h4 class="page-main__courses__playlist__list__item__title">Урок 12</h4>
+							<p class="page-main__courses__playlist__list__item__description">
+								Present Continuous
+							</p>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="page-main__contacts">
+				<h2 class="page-main__contacts__header">Контакты</h2>
+				<ul class="page-main__contacts__contact-list">
+					<li class="page-main__contacts__contact-list__item">
+						<a
+							href="#"
+							class="page-main__contacts__contact-list__item__contact-link"
+							data-name="Н"
+						>
+							<p
+								class="page-main__contacts__contact-list__item__contact-name page-main__contacts__contact-list__item__contact-online"
+							>
+								Неопознанный Енот
+							</p>
+							<p class="page-main__contacts__contact-list__item__learning-progress">
+								English A1
+							</p>
+						</a>
+					</li>
+					<li class="page-main__contacts__contact-list__item">
+						<a
+							href="#"
+							class="page-main__contacts__contact-list__item__contact-link"
+							data-name="Н"
+						>
+							<p
+								class="page-main__contacts__contact-list__item__contact-name page-main__contacts__contact-list__item__contact-online"
+							>
+								Неопознанный Енот2
+							</p>
+							<p class="page-main__contacts__contact-list__item__learning-progress">
+								Español 2
+							</p>
+						</a>
+					</li>
+					<li class="page-main__contacts__contact-list__item">
+						<a
+							href="#"
+							class="page-main__contacts__contact-list__item__contact-link"
+							data-name="Н"
+						>
+							<p
+								class="page-main__contacts__contact-list__item__contact-name page-main__contacts__contact-list__item__contact-online"
+							>
+								Неопознанный Енот3
+							</p>
+							<p class="page-main__contacts__contact-list__item__learning-progress">
+								日本語
+							</p>
+						</a>
+					</li>
+					<li class="page-main__contacts__contact-list__item">
+						<a
+							href="#"
+							class="page-main__contacts__contact-list__item__contact-link"
+							data-name="Н"
+						>
+							<p
+								class="page-main__contacts__contact-list__item__contact-name page-main__contacts__contact-list__item__contact-online"
+							>
+								Неопознанный Енот4
+							</p>
+							<p class="page-main__contacts__contact-list__item__learning-progress">
+								English B2
+							</p>
+						</a>
+					</li>
+					<li class="page-main__contacts__contact-list__item">
+						<a
+							href="#"
+							class="page-main__contacts__contact-list__item__contact-link"
+							data-name="Н"
+						>
+							<p class="page-main__contacts__contact-list__item__contact-name">
+								Неопознанный Енот5
+							</p>
+							<p class="page-main__contacts__contact-list__item__learning-progress">
+								Le Français
+							</p>
+						</a>
+					</li>
+					<li class="page-main__contacts__contact-list__item">
+						<a
+							href="#"
+							class="page-main__contacts__contact-list__item__contact-link"
+							data-name="Н"
+						>
+							<p class="page-main__contacts__contact-list__item__contact-name">
+								Неопознанный Енот6
+							</p>
+							<p class="page-main__contacts__contact-list__item__learning-progress">
+								Español 1
+							</p>
+						</a>
+					</li>
+					<li class="page-main__contacts__contact-list__item">
+						<a
+							href="#"
+							class="page-main__contacts__contact-list__item__contact-link"
+							data-name="Н"
+						>
+							<p class="page-main__contacts__contact-list__item__contact-name">
+								Неопознанный Енот7
+							</p>
+							<p class="page-main__contacts__contact-list__item__learning-progress">
+								Italiano
+							</p>
+						</a>
+					</li>
+				</ul>
+			</section>
+		</main>
+		<footer class="page-footer">
+			<p class="page-footer__copyright">© 2020</p>
+			<p class="page-footer__logo"><b>Let’s Speak,</b> языковая школа</p>
+			<p class="page-footer__details">Сайт создан в HTML Academy</p>
+		</footer>
+	</body>
+</html>

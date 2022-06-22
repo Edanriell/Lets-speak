@@ -1,0 +1,36 @@
+$footerBackgroundColor: #3C425F
+
+=footerText
+  color: #FFF
+  opacity: 0.5
+  font-size: 16px
+  line-height: 20px
+
+.page-footer
+  grid-area: footer
+  display: grid
+  grid-template-columns: 280px 1fr 280px
+  background-color: $footerBackgroundColor
+
+  &__copyright
+    +footerText
+    margin: 20px 10px 10px 30px
+    font-family: 'Roboto-Light'
+
+  &__logo
+    +footerText
+    margin: 20px 0
+    text-align: center
+    font-family: 'Roboto-Light'
+
+    b
+      +footerText
+      font-family: 'Roboto-Medium'
+      font-weight: 500
+      opacity: 1
+
+  &__details
+    +footerText
+    text-align: right
+    margin: 20px 30px 20px 0
+    font-family: 'Roboto-Light'

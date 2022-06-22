@@ -1,0 +1,385 @@
+$disabled: 0.1
+$mainBackgroundColor: #F1F3FE
+$sliderTextColor: #FFF
+$oceanText: #3C425F
+$timeTextColor: #0BC4CF
+$linkColor: #576BCC
+$borderMain: 1px solid #B4BEF0
+$borderBlock: 1px solid #E4E8FC
+$contactAvatarBackgroundColor: #f1f3fe
+$userOnlineIconColor: #0BC4CF
+$userOnlineIconBorder: 2px solid #FFFFFF
+
+=blockStyles
+  background: #FFFFFF
+  box-shadow: 0px 1px 4px rgba(60, 66, 95, 0.2)
+  border-radius: 4px
+
+=playIconHover($hoverColor: true)
+  @if $hoverColor
+  .page-main__courses__playlist__list__item__play-btn
+    background-image: url(../img/icons/play-video-filled.svg)
+
+=buttonDisabled($disabled: true)
+  @if $disabled
+  .page-main__courses__playlist__list__item__play-btn
+    background-image: url(../img/icons/play-video-filled.svg)
+    pointer-events: none
+
+    pointer-events: none
+
+.page-main
+  grid-area: main
+  padding: 30px
+  display: grid
+  grid-template-areas: "slider contacts" "offers contacts" "courses contacts"
+  grid-template-columns: 3fr 1fr
+  grid-template-rows: 300px auto 1fr
+  grid-gap: 20px
+  background-color: $mainBackgroundColor
+  border-left: $borderMain
+  border-top: $borderMain
+
+  &__slider
+    position: relative
+    grid-area: slider
+    width: 820px
+    height: 300px
+    box-sizing: border-box
+    border-radius: 4px
+    font-size: 18px
+    line-height: 28px
+    color: #FFF
+
+    &__slide-img0
+      position: absolute
+      top: 0
+      left: 0
+      width: 820px
+      height: 300px
+
+    &__slide-img1
+      @extend .page-main__slider__slide-img0
+      left: 820px
+
+    &__slide-img2
+      @extend .page-main__slider__slide-img0
+      left: 1640px
+
+    &__slide-img3
+      @extend .page-main__slider__slide-img0
+      left: 2460px
+
+    &__slide-headline
+      position: relative
+      font-family: 'Roboto-Black'
+      font-weight: 900
+      font-size: 28px
+      line-height: 48px
+      color: $sliderTextColor
+      margin: 0
+      margin-top: 60px
+      margin-left: 60px
+      margin-bottom: 10px
+
+    &__slide-text
+      position: relative
+      font-family: 'Roboto-Light'
+      color: $sliderTextColor
+      margin: 0
+      margin-left: 60px
+      margin-bottom: 24px
+
+    &__btn
+      position: absolute
+      background-color: #FF8F0B
+      margin-left: 60px
+      padding: 10px 20px
+      border-radius: 4px
+      text-decoration: none
+      color: $sliderTextColor
+      font-family: 'Roboto-Medium'
+      font-weight: 500
+      line-height: 22px
+
+      &:hover
+        background-color: #F2880A
+
+    &__btn-prev
+      position: absolute
+      left: 0
+      top: 118px
+      width: 64px
+      height: 64px
+      background-color: #FFF
+      border: none
+      border-radius: 50%
+      background-image: url(../img/icons/slider-arrow.svg)
+      background-repeat: no-repeat
+      background-position: left 35px center
+      background-size: 18px 18px
+      transform: translateX(-32px)
+      outline: none
+      cursor: pointer
+
+      &:hover
+        background-image: url(../img/icons/slider-arrow-filled.svg)
+
+    &__btn-next
+      @extend .page-main__slider__btn-prev
+      left: 788px
+      transform: rotate(180deg)
+
+  &__offers
+    grid-area: offers
+    width: 820px
+    height: 140px
+
+    &__offer-list
+      display: grid
+      grid-template-columns: repeat(3, 1fr)
+      grid-gap: 20px
+      list-style: none
+      margin: 0
+      padding: 0
+
+      &__item
+        display: grid
+        grid-template-rows: auto 1fr auto
+        padding: 20px 30px
+        +blockStyles
+
+        &__name
+          margin: 0
+          font-family: 'Roboto-Medium'
+          color: $oceanText
+          font-weight: 500
+          font-size: 18px
+          line-height: 22px
+
+        &__content
+          &__description
+            margin: 5px 0 5px 0
+            font-family: 'Roboto-Light'
+            color: $oceanText
+            font-size: 14px
+            line-height: 20px
+
+          &__time
+            margin: 0 0 8px 0
+            font-size: 14px
+            line-height: 20px
+            font-family: 'Roboto-Black'
+            font-weight: 900
+            color: $timeTextColor
+
+        &__footer
+          text-align: right
+
+          a
+            font-family: 'Roboto-Medium'
+            font-size: 16px
+            font-weight: 500
+            color: $linkColor
+            text-decoration: none
+
+  &__courses
+    grid-area: courses
+    display: grid
+    grid-template-columns: 1fr auto
+    grid-gap: 20px
+
+    &__video
+      width: 540px
+      height: 300px
+      border: none
+      border-radius: 4px
+      position: relative
+
+    &__videoPlayBtn
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      width: 64px
+      height: 64px
+      background: #576BCC
+      border: 1px solid #000000
+      box-sizing: border-box
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+      border-radius: 4px
+      cursor: pointer
+      transition: all 0.3s ease
+      &:hover
+        background: #4757a8
+      &::before
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        content: ""
+        width: 20px
+        height: 24px
+        background: url("../img/icons/play.svg") no-repeat center
+
+    &__playlist
+      width: 260px
+      height: 300px
+      +blockStyles
+      // overflow-y: auto
+
+      &__header
+        font-size: 18px
+        line-height: 22px
+        font-family: 'Roboto-Medium'
+        font-weight: 500
+        color: $oceanText
+        margin: 0
+        margin: 20px 0 0 30px
+        padding-bottom: 10px
+        border-bottom: $borderBlock
+
+      &__list
+        list-style: none
+        padding: 0
+        margin: 0
+        margin-top: 12px
+
+        &__item
+          display: grid
+          position: relative
+          grid-template-columns: 32px auto
+          grid-template-rows: auto auto
+          grid-template-areas: "button title" "button description"
+          line-height: 16px
+          color: $oceanText
+          margin: 0
+          padding: 8px 0 8px 30px
+
+          &:hover
+            background-image: url('../img/icons/menu-icon-small.svg')
+            +icon
+            background-position: 0px 0px
+
+          &__play-btn
+            grid-area: button
+            position: relative
+            width: 32px
+            height: 32px
+            border: none
+            outline: none
+            background-color: transparent
+            background-image: url(../img/icons/play-video.svg)
+            cursor: pointer
+
+            &:active
+              filter: brightness(80%)
+
+          &:hover
+            +playIconHover($hoverColor:true)
+
+          &__title
+            grid-area: title
+            position: relative
+            font-family: 'Roboto-Black'
+            font-weight: 900
+            margin: 0
+            padding-left: 12px
+            pointer-events: none
+
+          &__description
+            font-family: 'Roboto-Light'
+            grid-area: description
+            position: relative
+            margin: 0
+            padding-left: 12px
+            pointer-events: none
+
+          &__disabled
+            +buttonDisabled($disabled:true)
+            opacity: $disabled
+            filter: grayscale(100%)
+
+            &__unreachable:after
+              color: $oceanText
+              position: absolute
+              bottom: 0
+              height: 100%
+              width: 100%
+              content: ""
+              background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 50.52%)
+
+          &:hover
+            background-color: $hoverColor
+            +playIconHover($hoverColor:true)
+
+  &__contacts
+    grid-area: contacts
+    width: 260px
+    height: 780px
+    +blockStyles
+
+    &__header
+      @extend .page-main__courses__playlist__header
+      font-family: 'Roboto-Medium'
+
+    &__contact-list
+      @extend .page-main__courses__playlist__list
+      font-family: 'Roboto-Light'
+
+      &__item
+        margin: 0
+        padding: 8px 0 8px 30px
+
+        a
+          text-decoration: none
+          color: $oceanText
+
+        &__contact-link
+          position: relative
+          display: grid
+          grid-template-columns: 40px auto
+          grid-template-rows: auto auto
+          grid-column-gap: 12px
+
+          &:before
+            grid-row: 1 / 3
+            content: attr(data-name)
+            width: 40px
+            height: 40px
+            font-weight: 900
+            font-size: 22px
+            line-height: 40px
+            text-align: center
+            color: #b4bef0
+            border-radius: 100%
+            background-color: $contactAvatarBackgroundColor
+            margin-right: 12px
+
+        &__contact-online:before
+          grid-row: 1 / 2
+          grid-column: 2 / 3
+          content: ''
+          position: absolute
+          left: -52px
+          top: 0
+          width: 8px
+          height: 8px
+          border-radius: 50%
+          background-color: $userOnlineIconColor
+          border: $userOnlineIconBorder
+
+        &__contact-name
+          color: #3C425F
+          grid-column: 2 / 3
+          grid-row: 1 / 2
+          margin: 0
+
+          &:hover
+            text-decoration: underline
+
+        &__learning-progress
+          grid-column: 2 / 3
+          grid-row: 2 / 3
+          margin: 0
+          filter: grayscale(100%)
